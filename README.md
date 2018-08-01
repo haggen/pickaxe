@@ -8,11 +8,11 @@ This is the draft specification of a shell game engine that'll be written in Go.
 
 ## Motivation
 
-I want a rogue-like shell MMORPG inspired by the MUDs of yore.
+I want to learn about game development and I've always wanted a rogue-like shell MMORPG inspired by the MUDs of yore.
 
 ## The Game
 
-Not sure yet but maybe think Ultima Online in the terminal.
+Not sure yet but maybe think Ultima Online with graphics of Ultima I-IV.
 
 ## The Engine
 
@@ -24,9 +24,13 @@ The code won't reflect it right away but eventually I want a human friendly obje
 
 <dl>
   <dt>Game</dt>
-  <dd>The game controller that holds everything together. It should handle the initialization, the game loop, the user input, the scene management and the wind down of the program.</dd>
+  <dd>The game controller that holds everything together. It should handle the initialization, the game loop, user input, scene management and the wind down of the program.</dd>
   <dt>Scene</dt>
-  <dd>A scene is a context, a group of entities and behaviors that area contextually linked, like the "main menu", the "intro". the "gameplay", the "pause menu", a "dialogue", etc. Multiple scenes can be active at any given time.</dd>
+  <dd>A scene is a configuration of the screen, a collective of entities that are contextually linked, it's how the game knows what to render on the screen. e.g. the main menu, the game intro, the gameplay, the pause menu, a dialogue, a cutscene, etc. A Scene can be idle or active, only entities of an active scene are updated, and multiple scenes can be active at any given time.</dd>
   <dt>Entity</dt>
-  <dd>An entity is a piece of logic that might have a visual representation on the screen. The player is an entity, so is an item, an NPC, but so is a timer, a light source, an environmental effect, or even a fragment of the interface.</dd>
+  <dd>An entity is a piece of logic that can have a visual representation on the screen. The player is an entity, and so is an item, or an NPC, but so is a timer, a light source, an environmental effect, an interface control, etc.</dd>
+  <dt>World</dt>
+  <dd>The game world is but a cartesian plane where entities can be positioned and tiles can be laid out.</dd>
+  <dt>Camera</dt>
+  <dd>A camera is a window into the game world so it can be rendered on the screen. Cameras are added to a _Scene_ and more than one can exist at the same time.</dd>
 </dl>
