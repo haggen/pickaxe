@@ -25,18 +25,15 @@ The code won't reflect it right away but eventually I want a human friendly obje
 <dl>
   <dt>Game</dt>
   <dd>The game controller that holds everything together. It should handle the initialization, the game loop, user input, scene management and the wind down of the program.</dd>
-  <dt>Scene</dt>
-  <dd>A scene is a configuration of the screen, a series of entities such as cameras and interface controls that are contextually linked, so the game knows when and what to render. e.g. the main menu, the game intro, the gameplay, the pause menu, a dialogue, a cutscene, etc. A Scene can be idle or active, only entities of an active scene are updated, and multiple scenes can be active at any given time.</dd>
   <dt>Entity</dt>
   <dd>An entity is a piece of logic that can have a visual representation. The player is an entity, and so is an item, or an NPC, but so is a timer, a light source, an environmental effect, an interface control, etc.</dd>
-  <dt>World</dt>
-  <dd>The game world is but a cartesian plane where entities can be positioned and tiles can be laid out.</dd>
-  <dt>Camera</dt>
-  <dd>A slice of game world so it can been seen. Cameras are added to a Scene and more than one can exist at the same time.</dd>
   <dt>Tile</dt>
   <dd>A cell in the grid of the game world. Dirt, grass, water, a segment of a road, a wall, a door, etc.</dd>
-  <dt>Glyph</dt>
-  <dd>The representation of a tile consisting of a character and the color configuration of foreground and background.</dd>
-  <dt>Sprite</dt>
+  <dt>World</dt>
+  <dd>The game world is where tiles and entities are laid out on a plane giving them position, direction, speed, etc. in relation to each other, allowing for physical interaction.</dd>
+  <dt>Scene</dt>
+  <dd>A scene is a configuration of the screen, a series of entities such as cameras and interface controls that are contextually linked, so the game knows what to render. e.g. the main menu, the gameplay, a dialogue, etc.
+  <dt>Camera</dt>
+  <dd>A slice of game world so it can been seen. Cameras are added to a Scene and more than one can exist at the same time.</dd>
   <dd>...</dd>
 </dl>
